@@ -1,58 +1,35 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
-using namespace std;
+#include "Contact.h"
 
 // ==========================================
-// 1. Task for [ Amany ] - The Data Model
-// ==========================================
-class Contact {
-private:
-    string name, phone, email, address;
-public:
-    Contact(string n, string p, string e = "no", string a = "no") 
-        : name(n), phone(p), email(e), address(a) {}
-
-    string getName() { return name; }
-    
-    void display() {
-        cout << "--------------------------------" << endl;
-        cout << "Name: " << name << "\nPhone: " << phone << endl;
-        cout << "Email: " << email << "\nAddress: " << address << endl;
-    }
-};
-
-// =========================================================
-// 2. Tasks for [ Abdelrhman ] & [ Alaa Mohamed ] - Logic
-// =========================================================
-class ContactsManager {
-private:
-    vector<Contact> contacts;
-
-public:
-    // Abdelrhman will write addContact & displayAll here
-    void addContact() {
-        cout << "[System]: Abdelrhman will implement this." << endl;
-    }
-
-    void displayAll() {
-        cout << "[System]: Abdelrhman will implement this." << endl;
-    }
-
-    // Alaa Mohamed will write search & update here
-    void search(string name) {
-        cout << "[System]: Alaa Mohamed will implement this." << endl;
-    }
-};
-
-// ==========================================
-// 3. Task for [ Alaa Mosbah ] - UI & Menu
+// 3. Task for [ Alla Mosbah ]
 // ==========================================
 int main() {
     ContactsManager myManager;
-    cout << "Welcome to Phone Contacts Manager!" << endl;
-    // Alaa Mosbah will implement the while loop and switch case here
-    
+    int choice;
+
+    while (true) {
+        cout << "\nWelcome to Phone Contacts Manager!" << endl;
+        cout << "=== MAIN MENU ===" << endl;
+        cout << "1. Add Contact" << endl;
+        cout << "2. Display All Contacts" << endl;
+        cout << "3. Search Contacts" << endl;
+        cout << "4. Update Contact" << endl;
+        cout << "0. Exit" << endl;
+        cout << "==================" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            // Call Abdelrhman's add function
+        } else if (choice == 2) {
+            myManager.displayAll();
+        } else if (choice == 0) {
+            cout << "Exiting program. Goodbye!" << endl;
+            break;
+        } else {
+            cout << "Invalid choice, please try again." << endl;
+        }
+    }
+
     return 0;
 }
