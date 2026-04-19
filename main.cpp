@@ -14,6 +14,7 @@ int main() {
         cout << "2. Display All Contacts" << endl;
         cout << "3. Search Contacts" << endl;
         cout << "4. Update Contact" << endl;
+        cout << "5. Show Total Contacts" << endl;
         cout << "0. Exit" << endl;
         cout << "==================" << endl;
         cout << "Enter your choice: ";
