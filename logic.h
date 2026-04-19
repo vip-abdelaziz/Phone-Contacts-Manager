@@ -44,6 +44,7 @@ public:
     // [ Abdelrhman Osama ] - Addition & Basic View
     void addContact(const Contact& c) {
         contacts.push_back(c);
+        std::cout << "Contact added successfully!\n";
     }
 
     void displayAll() const {
@@ -51,9 +52,14 @@ public:
             cout << "No contacts found!" << endl;
             return;
         }
+        std::cout << "\n=== ALL CONTACTS ===\n";
         for (const auto& c : contacts) {
             c.display();
         }
+    }
+    
+    void showContactCount() const {
+        cout << "Total Contacts: " << contacts.size() << endl;
     }
 
     // [ Alaa Mohamed ] - Search & Update Logic
