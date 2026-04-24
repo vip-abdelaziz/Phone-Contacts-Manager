@@ -34,7 +34,7 @@ public:
 };
 
 // =========================================================
-// 2. Tasks for [ Abdelrhman Osama ] & [ Alaa Mohamed ]
+// 2. Tasks for [ Abdelrhman Osama ] & [ Lujy Ali ]
 // =========================================================
 class ContactsManager {
 private:
