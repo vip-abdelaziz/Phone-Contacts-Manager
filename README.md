@@ -10,8 +10,8 @@ We are a dedicated team of 5 students, each responsible for a core module of the
 | **Abdelaziz Elbatatkhi** | Project Manager | GitHub Administration & Code Integration |
 | **Amany Hossam** | Data Architect | Contact Class & Data Modeling |
 | **Abdelrhman Osama** | Core Developer | Addition & Display Logic |
-| **Alaa Mohamed** | Feature Developer | Search & Update Functionalities |
-| **Alla Mosbah** | UI/UX Designer | Main Menu & User Interface Flow |
+| **Ahmad Abelsalam** | Feature Developer | Search & Update Functionalities |
+| **Lujy Ali** | UI/UX Designer | Main Menu & User Interface Flow |
 
 ## Key Features
 * **Encapsulation:** Using private data members with public getters/setters.
