@@ -62,7 +62,7 @@ public:
         cout << "Total Contacts: " << contacts.size() << endl;
     }
 
-    // [ Alaa Mohamed ] - Search & Update Logic
+    // [ Lujy Ali ] - Search & Update Logic
     void searchContact(string targetName) {
         // Search logic goes here
     }
