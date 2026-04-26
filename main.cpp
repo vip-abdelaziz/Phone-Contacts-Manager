@@ -1,13 +1,16 @@
 #include "contact.h"
 
-using namespace std;
+// =========================================================
+// واجهة المستخدم والـ Main Loop - قام بها: [ Lujy Ali ]
+// =========================================================
 
 int main() {
+    // ( Abdelaziz ) إنشاء كائن الإدارة الذي سيحمل البيانات تلقائياً 
     ContactsManager myManager;
     int choice;
 
     while (true) {
-        // --- واجهة المستخدم (Lujy ) ---
+        // تصميم القوائم (Lujy Ali)
         cout << "\nWelcome to Phone Contacts Manager!" << endl;
         cout << "=== MAIN MENU ===" << endl;
         cout << "1. Add Contact" << endl;
@@ -18,8 +21,8 @@ int main() {
         cout << "0. Exit" << endl;
         cout << "==================" << endl;
         cout << "Enter your choice: ";
-
-        // منع الـ Loop اللانهائي في حال إدخال خاطئ
+        
+        // التحقق من صحة مدخلات المستخدم ( Abdelaziz )
         if (!(cin >> choice)) {
             cout << "Invalid input. Please enter a number." << endl;
             cin.clear();
@@ -27,23 +30,24 @@ int main() {
             continue;
         }
 
+        // توزيع الاختيارات على دوال الفريق (Lujy Ali)
         switch (choice) {
             case 1: {
-                // تجميع بيانات الكائن (Amany )
+                // استقبال البيانات (Amany & Abdelrhman )
                 string n, p, e, a;
-                cin.ignore();
+                cin.ignore(); 
                 cout << "Enter Name: "; getline(cin, n);
                 cout << "Enter Phone: "; getline(cin, p);
-                cout << "Enter Email: "; getline(cin, e);
-                cout << "Enter Address: "; getline(cin, a);
+                cout << "Enter Email (Optional): "; getline(cin, e);
+                cout << "Enter Address (Optional): "; getline(cin, a);
 
-                Contact newContact(n, p, e, a);
-                myManager.addContact(newContact);
+                myManager.addContact(Contact(n, p, e, a));
                 break;
             }
             case 2:
                 myManager.displayAll();
                 break;
+
             case 3: {
                 string sName;
                 cout << "Enter name to search: ";
@@ -63,13 +67,16 @@ int main() {
             case 5:
                 myManager.showContactCount();
                 break;
+
             case 0:
                 cout << "Exiting program. Goodbye!" << endl;
                 return 0;
+
             default:
                 cout << "Invalid choice, please try again." << endl;
                 break;
         }
     }
+
     return 0;
 }
